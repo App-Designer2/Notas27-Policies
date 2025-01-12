@@ -6,63 +6,47 @@
     <title>Notas27</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
-            background-color: #f5f5f5; /* Color de fondo claro */
-            color: #333333; /* Color de texto oscuro para contraste */
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
             text-align: center;
         }
         header {
-            background-color: #1a237e; /* Azul marino */
-            padding: 20px;
+            background-color: #001f5b;
+            color: #fff;
+            padding: 20px 0;
         }
         header img {
             width: 100px;
-            height: auto;
+            margin-bottom: 10px;
         }
         header h1 {
-            margin: 10px 0 0;
-            font-size: 2.5em;
-            color: #ffffff;
+            margin: 0;
+            font-size: 2rem;
         }
         header p {
-            margin: 5px 0 0;
-            font-size: 1.2em;
-            color: #ffffff;
+            margin: 0;
+            font-size: 1rem;
         }
-        main {
-            padding: 40px 20px;
+        .content {
+            padding: 20px;
         }
-        main p {
-            font-size: 1.1em;
-            margin-bottom: 30px;
-        }
-        main ul {
-            list-style: none;
-            padding: 0;
-        }
-        main li {
-            margin: 15px 0;
-        }
-        main a {
+        .content a {
+            color: #001f5b;
             text-decoration: none;
-            color: #1a237e; /* Azul marino */
-            font-weight: bold;
-            font-size: 1.2em;
-            transition: color 0.3s;
         }
-        main a:hover {
-            color: #ff6f00; /* Naranja brillante */
+        .content a:hover {
+            text-decoration: underline;
+        }
+        .app-store-button {
+            margin: 20px 0;
         }
         footer {
-            background-color: #1a237e; /* Azul marino */
-            padding: 10px;
-            font-size: 0.9em;
-            color: #ffffff;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            background-color: #001f5b;
+            color: #fff;
+            padding: 10px 0;
+            font-size: 0.8rem;
         }
     </style>
 </head>
@@ -72,16 +56,22 @@
         <h1>Notas27</h1>
         <p>Organiza y personaliza tus ideas</p>
     </header>
-    <main>
-        <p>Bienvenido al sitio oficial de Notas27. Aquí encontrarás información importante:</p>
+    <div class="content">
+        <p>Bienvenido al sitio oficial de Notas27. Aquí encontrarás información importante sobre:</p>
         <ul>
             <li><a href="privacy-policy.md">Política de Privacidad</a></li>
             <li><a href="terms-of-use.md">Términos de Uso</a></li>
         </ul>
         <p>¡Gracias por visitarnos!</p>
-    </main>
+        
+        <div class="app-store-button">
+            <a href="https://apps.apple.com/us/app/notas27/id6737212289?itscg=30200&itsct=apps_box_badge&mttnsubad=6737212289" style="display: inline-block;">
+                <img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us?releaseDate=1729728000" alt="Download on the App Store" style="width: 245px; height: 82px; vertical-align: middle; object-fit: contain;" />
+            </a>
+        </div>
+    </div>
     <footer>
-        &copy; 2025 Notas27 - Todos los derechos reservados.
+        © 2025 Notas27 - Todos los derechos reservados.
     </footer>
 </body>
 </html>
