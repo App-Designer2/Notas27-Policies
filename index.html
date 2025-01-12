@@ -8,70 +8,70 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            text-align: center;
+            background-color: #f0f4f8;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
         header {
-            background-color: #001f5b;
-            color: #fff;
-            padding: 20px 0;
+            background-color: #002855;
+            color: white;
+            text-align: center;
+            padding: 20px;
         }
         header img {
             width: 100px;
-            margin-bottom: 10px;
         }
-        header h1 {
-            margin: 0;
-            font-size: 2rem;
-        }
-        header p {
-            margin: 0;
-            font-size: 1rem;
-        }
-        .content {
+        main {
+            flex: 1;
+            text-align: center;
             padding: 20px;
         }
-        .content a {
-            color: #001f5b;
-            text-decoration: none;
+        footer {
+            background-color: #002855;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: auto;
         }
-        .content a:hover {
+        a {
+            text-decoration: none;
+            color: #002855;
+            font-weight: bold;
+        }
+        a:hover {
             text-decoration: underline;
         }
-        .app-store-button {
-            margin: 20px 0;
+        .app-store-badge {
+            margin-top: 20px;
         }
-        footer {
-            background-color: #001f5b;
-            color: #fff;
-            padding: 10px 0;
-            font-size: 0.8rem;
+        .app-store-badge img {
+            width: 200px; /* Tamaño reducido */
+            height: auto;
         }
     </style>
 </head>
 <body>
     <header>
-        <img src="https://i.ibb.co/bbXsxhJ/IMG-6225.png" alt="Logo de Notas27" border="0">
+        <img src="https://i.ibb.co/bbXsxhJ/IMG-6225.png" alt="Logo de Notas27">
         <h1>Notas27</h1>
         <p>Organiza y personaliza tus ideas</p>
     </header>
-    <div class="content">
+    <main>
         <p>Bienvenido al sitio oficial de Notas27. Aquí encontrarás información importante sobre:</p>
         <ul>
             <li><a href="privacy-policy.md">Política de Privacidad</a></li>
             <li><a href="terms-of-use.md">Términos de Uso</a></li>
         </ul>
         <p>¡Gracias por visitarnos!</p>
-        
-        <div class="app-store-button">
+        <div class="app-store-badge">
             <a href="https://apps.apple.com/us/app/notas27/id6737212289?itscg=30200&itsct=apps_box_badge&mttnsubad=6737212289" style="display: inline-block;">
-                <img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us?releaseDate=1729728000" alt="Download on the App Store" style="width: 245px; height: 82px; vertical-align: middle; object-fit: contain;" />
+                <img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us?releaseDate=1729728000" alt="Download on the App Store">
             </a>
         </div>
-    </div>
+    </main>
     <footer>
-        © 2025 Notas27 - Todos los derechos reservados.
+        &copy; 2025 Notas27 - Todos los derechos reservados.
     </footer>
 </body>
 </html>
