@@ -11,6 +11,8 @@ Características principales:
 
 Tecnologías utilizadas:
 	•	SwiftUI para una experiencia visual intuitiva.
+        •	SwiftData para la persistencia de datos.
+	•	CloudKit para la sisncronizacion de datos entre dipositivos.
 	•	RevenueCat para la gestión de suscripciones.
 	•	SwiftOpenAI para la integración de modelos de inteligencia artificial.
 
