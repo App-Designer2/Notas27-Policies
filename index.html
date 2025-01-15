@@ -6,48 +6,106 @@
     <title>Notas27</title>
     <style>
         body {
-            margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #f0f4f8;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
         }
         header {
-            background-color: #002855;
+            background-color: #002147;
             color: white;
-            text-align: center;
             padding: 20px;
+            text-align: center;
         }
         header img {
             width: 100px;
+            height: auto;
         }
-        main {
-            flex: 1;
+        header h1 {
+            margin: 10px 0 0 0;
+            font-size: 24px;
+        }
+        header p {
+            margin: 5px 0 0 0;
+            font-size: 16px;
+        }
+        nav {
+            background-color: #0050b3;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 16px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .content {
+            max-width: 1000px;
+            margin: 20px auto;
             text-align: center;
             padding: 20px;
         }
-        footer {
-            background-color: #002855;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            margin-top: auto;
-        }
-        a {
-            text-decoration: none;
-            color: #002855;
-            font-weight: bold;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .app-store-badge {
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
             margin-top: 20px;
         }
-        .app-store-badge img {
-            width: 200px; /* Tamaño reducido */
+        .grid img {
+            width: 100%;
             height: auto;
+            border-radius: 10px;
+        }
+        .form-section {
+            background-color: #e3f2fd;
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 10px;
+            text-align: left;
+        }
+        .form-section h2 {
+            text-align: center;
+        }
+        .form-section label {
+            font-weight: bold;
+        }
+        .form-section input,
+        .form-section textarea,
+        .form-section button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .form-section button {
+            background-color: #0050b3;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .form-section button:hover {
+            background-color: #002147;
+        }
+        footer {
+            background-color: #002147;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        footer a {
+            color: #1e90ff;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -57,21 +115,51 @@
         <h1>Notas27</h1>
         <p>Organiza y personaliza tus ideas</p>
     </header>
-    <main>
-        <p>Bienvenido al sitio oficial de Notas27. Aquí encontrarás información importante sobre:</p>
-        <ul>
-            <li><a href="privacy-policy.md">Política de Privacidad</a></li>
-            <li><a href="terms-of-use.md">Términos de Uso</a></li>
-        </ul>
-        <p>¡Gracias por visitarnos!</p>
-        <div class="app-store-badge">
-            <a href="https://apps.apple.com/us/app/notas27/id6737212289?itscg=30200&itsct=apps_box_badge&mttnsubad=6737212289" style="display: inline-block;">
-                <img src="https://toolbox.marketingtools.apple.com/api/v2/badges/download-on-the-app-store/black/en-us?releaseDate=1729728000" alt="Download on the App Store">
-            </a>
-        </div>
-    </main>
+    <nav>
+        <a href="#features">Características</a>
+        <a href="#gallery">Galería</a>
+        <a href="#contact">Contacto</a>
+    </nav>
+    <div class="content">
+        <section id="features">
+            <h2>Características principales</h2>
+            <p>Descubre las funcionalidades únicas de Notas27:</p>
+            <ul>
+                <li>Organización avanzada de notas.</li>
+                <li>Asistente personal con IA integrado.</li>
+                <li>Generación de imágenes personalizadas.</li>
+                <li>Gestión de categorías y etiquetas.</li>
+            </ul>
+        </section>
+        <section id="gallery">
+            <h2>Galería</h2>
+            <p>Explora imágenes destacadas de Notas27:</p>
+            <div class="grid">
+                <img src="https://via.placeholder.com/200x150" alt="Funcionalidad 1">
+                <img src="https://via.placeholder.com/200x150" alt="Funcionalidad 2">
+                <img src="https://via.placeholder.com/200x150" alt="Funcionalidad 3">
+                <img src="https://via.placeholder.com/200x150" alt="Funcionalidad 4">
+            </div>
+        </section>
+        <section id="contact" class="form-section">
+            <h2>Contacto</h2>
+            <form action="https://example.com/submit" method="POST">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" placeholder="Tu nombre..." required>
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" placeholder="Tu correo electrónico..." required>
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" rows="4" placeholder="Tu mensaje..." required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </div>
     <footer>
-        &copy; 2025 Notas27 - Todos los derechos reservados.
+        <p>&copy; 2025 Notas27 - Todos los derechos reservados.</p>
+        <p>
+            <a href="https://www.notas27.com/privacy-policy" target="_blank">Política de Privacidad</a> |
+            <a href="https://www.notas27.com/terms-of-use" target="_blank">Términos de Uso</a>
+        </p>
     </footer>
 </body>
 </html>
