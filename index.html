@@ -142,6 +142,32 @@
         .app-download img {
             width: 200px;
         }
+
+		/* Estilos para el botón flotante */
+        .theme-toggle {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            background: #00509e;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s;
+        }
+        .theme-toggle:hover {
+            background: #003366;
+        }
+        .theme-toggle img {
+            width: 30px;
+            height: 30px;
+        }
     </style>
 </head>
 <body>
@@ -231,6 +257,10 @@
         </a>
     </section>
 
+	<button class="theme-toggle" onclick="toggleTheme()">
+        <img id="theme-icon" src="https://img.icons8.com/ios/50/ffffff/sun.png" alt="Modo Claro">
+    </button>
+
     <footer>
         <p>
             &copy; 2025 Notas27 - Todos los derechos reservados.<br>
@@ -238,6 +268,25 @@
             <a href="https://www.notas27.com/terms-of-use">Términos de Uso</a>
         </p>
     </footer>
+
+	<script>
+        function toggleTheme() {
+            const body = document.body;
+            const themeIcon = document.getElementById('theme-icon');
+            body.classList.toggle('dark-theme');
+            if (body.classList.contains('dark-theme')) {
+                body.style.backgroundColor = '#333';
+                body.style.color = '#fff';
+                themeIcon.src = 'https://img.icons8.com/ios/50/ffffff/moon-symbol.png';
+                themeIcon.alt = 'Modo Oscuro';
+            } else {
+                body.style.backgroundColor = '#f5f7fa';
+                body.style.color = '#333';
+                themeIcon.src = 'https://img.icons8.com/ios/50/ffffff/sun.png';
+                themeIcon.alt = 'Modo Claro';
+            }
+        }
+    </script>
 </body>
 </html>
 
