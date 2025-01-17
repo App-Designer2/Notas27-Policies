@@ -144,33 +144,88 @@
         }
 
 		/* Estilos para el botón flotante */
-        .theme-toggle {
-            position: fixed;
-            bottom: 80px;
-            right: 20px;
-            background: #00509e;
+         :root {
+            --bg-color-light: #f5f7fa;
+            --text-color-light: #333;
+            --section-bg-light: #fff;
+            --form-bg-light: #e8f4ff;
+
+            --bg-color-dark: #1c1c1c;
+            --text-color-dark: #e4e4e4;
+            --section-bg-dark: #333;
+            --form-bg-dark: #444;
+        }
+
+        body.light-mode {
+            background-color: var(--bg-color-light);
+            color: var(--text-color-light);
+        }
+
+        body.dark-mode {
+            background-color: var(--bg-color-dark);
+            color: var(--text-color-dark);
+        }
+
+        section, .grid div, form {
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        body.light-mode section {
+            background-color: var(--section-bg-light);
+        }
+
+        body.dark-mode section {
+            background-color: var(--section-bg-dark);
+        }
+
+        body.light-mode form {
+            background-color: var(--form-bg-light);
+            color: var(--text-color-light);
+        }
+
+        body.dark-mode form {
+            background-color: var(--form-bg-dark);
+            color: var(--text-color-dark);
+        }
+
+        header {
+            background: linear-gradient(135deg, #003366, #00509e);
             color: white;
+            text-align: center;
+            padding: 20px 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 600;
+        }
+
+        .theme-toggle-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #00509e;
             border: none;
             border-radius: 50%;
-            width: 60px;
-            height: 60px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            width: 50px;
+            height: 50px;
+            color: white;
+            font-size: 1.5rem;
             cursor: pointer;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
             transition: background-color 0.3s;
         }
-        .theme-toggle:hover {
-            background: #003366;
-        }
-        .theme-toggle img {
-            width: 30px;
-            height: 30px;
+
+        .theme-toggle-btn:hover {
+            background-color: #003366;
         }
     </style>
 </head>
-<body>
+<body class="light-mode">
     <header>
         <img src="https://i.ibb.co/bbXsxhJ/IMG-6225.png" alt="Logo de Notas27">
         <h1>Notas27</h1>
