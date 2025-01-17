@@ -51,25 +51,32 @@
             text-align: center;
         }
          .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin-top: 20px;
-        }
-        .grid div {
-            background: white;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            padding: 20px;
-            transition: transform 0.3s;
-        }
-        .grid div:hover {
-            transform: scale(1.05);
-        }
-        .grid img {
-            width: 80%;
-            border-radius: 10px;
-        }
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas */
+    gap: 20px;
+    margin-top: 20px;
+    padding: 0 20px; /* Espaciado lateral */
+}
+
+.grid div {
+    text-align: center; /* Centra imágenes y texto */
+    padding: 10px;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.grid img {
+    width: 100%; /* Asegura que las imágenes ocupen el ancho del contenedor */
+    max-width: 200px; /* Controla el tamaño máximo */
+    margin: 0 auto; /* Centra las imágenes */
+    display: block;
+}
+
+.grid div:hover {
+    transform: scale(1.05); /* Efecto de hover */
+}
         form {
             max-width: 600px;
             margin: 0 auto;
@@ -188,45 +195,35 @@
     </section>
 
     <section id="gallery">
-        <h2>Galería</h2>
-        <div class="gallery">
-           <div> <img src="https://i.ibb.co/mR747Xq/IMG-7609.png" alt="Main screen">
-		   <h3>Vista Principal</h3>
-		   <p>Aqui encontraras todos los archivos.</p>
-
-		   </div>
-
-		<div> <img src="https://i.ibb.co/6X21HGG/IMG-7610.png" alt="Add file screen">
-
-			<h3>Agegar Categorias</h3>
-		   <p>Personaliza tus categorias, dandole nombres y colores</p>
-
-		   </div>
-
-		   <div>
-            <img src="https://i.ibb.co/nft1BTC/IMG-7612.png" alt="Delete or edit screen">
-
-			<h3>Desliza A La Derecha</h3>
-		   <p>Desliza a la derecha, para <em>eliminar</em> o <em>editar</em> los archivos</p>
-
-		   </div>
-
-		    <div>
-            <img src="https://i.ibb.co/ggPbpjs/IMG-7613.png" alt="Delete alert screen">
-			<h3>Advertencia</h3>
-		   <p>Si eliminas un archivo, perderas todos los datos perteneciente a el</p>
-
-		   </div>
-
-		    <div>
-            <img src="https://i.ibb.co/MVfr5nh/IMG-7615.png" alt="Delete alert screen">
-			<h3>Suscripciones</h3>
-		   <p>Elije una de las suscripciones disponible, para aprobechar todas las funciones como: asistente personal <strong>"NotasIA"</strong>, "Generacion de Imagenes con <strong>"IA"</strong>, "Ampliar cotenidos con <strong>IA</strong>"</p>
-
-		   </div>
-
+    <h2>Galería</h2>
+    <div class="grid">
+        <div>
+            <img src="https://i.ibb.co/mR747Xq/IMG-7609.png" alt="Vista Principal">
+            <h3>Vista Principal</h3>
+            <p>Aquí encontrarás todos los archivos.</p>
         </div>
-    </section>
+        <div>
+            <img src="https://i.ibb.co/6X21HGG/IMG-7610.png" alt="Agregar Categorías">
+            <h3>Agregar Categorías</h3>
+            <p>Personaliza tus categorías, dándoles nombres y colores.</p>
+        </div>
+        <div>
+            <img src="https://i.ibb.co/nft1BTC/IMG-7612.png" alt="Eliminar o Editar Archivos">
+            <h3>Desliza a la Derecha</h3>
+            <p>Desliza a la derecha para eliminar o editar los archivos.</p>
+        </div>
+        <div>
+            <img src="https://i.ibb.co/ggPbpjs/IMG-7613.png" alt="Advertencia">
+            <h3>Advertencia</h3>
+            <p>Si eliminas un archivo, perderás todos los datos pertenecientes a él.</p>
+        </div>
+        <div>
+            <img src="https://i.ibb.co/MVfr5nh/IMG-7615.png" alt="Suscripciones">
+            <h3>Suscripciones</h3>
+            <p>Elige una de las suscripciones disponibles para aprovechar todas las funciones como: asistente personal <strong>"NotasIA"</strong>, generación de imágenes con <strong>IA</strong>, y ampliar contenidos con <strong>IA</strong>.</p>
+        </div>
+    </div>
+</section>
 
     <section id="contact">
         <h2>Contacto</h2>
