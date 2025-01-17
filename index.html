@@ -142,6 +142,17 @@
             width: 30px;
             height: 30px;
         }
+
+	    .video-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        video {
+            width: 80%;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
     </style>
 </head>
 <body>
@@ -166,6 +177,14 @@
             <li>Generación de imágenes personalizadas.</li>
             <li>Gestión de categorías y etiquetas.</li>
         </ul>
+    </section>
+
+	<section class="video-container">
+        <video autoplay muted loop>
+            <source src="https://871279412022-reelsai-prod.s3.eu-central-1.amazonaws.com/2024-12-28/8f6875f85e923ab1e66e978cf977c2169847c900bed5fac4eefb887652b00391.mp4" type="video/mp4">
+            Tu navegador no soporta la reproducción de video.
+        </video>
+        <p>Descubre cómo NotasIA puede ayudarte a maximizar tu productividad.</p>
     </section>
 
     <section id="gallery">
